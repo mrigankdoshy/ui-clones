@@ -1,0 +1,55 @@
+import 'package:twitter/Tweets/card.dart';
+
+var tweets = [
+  const Card(
+    avatar: 'assets/person1.jpg',
+    name: 'Antonio Markowich',
+    username: 'amarkowich',
+    timeAgo: '5m',
+    text: 'It\'s beginning to look a lot like christmas',
+    comments: '243',
+    retweets: '23K',
+    likes: '112K',
+  ),
+  const Card(
+    avatar: 'assets/person2.jpg',
+    name: 'Jake Gonzalez',
+    username: 'gonzalez_jake',
+    timeAgo: '12m',
+    text: 'Comunidad Flutter de habla hispana!',
+    comments: '46',
+    retweets: '4K',
+    likes: '17K',
+  ),
+  const Card(
+   avatar: 'assets/person3.jpg',
+    name: 'Michaela Clover',
+    username: 'michaela21',
+    timeAgo: '20m',
+    text: 'News and announcements for developers from the Android team.',
+    comments: '305',
+    retweets: '20K',
+    likes: '1M',
+  ),
+  const Card(
+    avatar: 'assets/person4.jpg',
+    name: 'Emma Blair',
+    username: 'emmablair',
+    timeAgo: '21m',
+    text:
+        'We\'re exploring the world\'s greatest stories through movies, TV, games, apps, books and so much more. Up for new adventures and discoveries? Let\'s play.',
+    comments: '1K',
+    retweets: '70K',
+    likes: '2M',
+  ),
+  const Card(
+    avatar: 'assets/person5.jpg',
+    name: 'Jo Bowers',
+    username: 'yoitsjo',
+    timeAgo: '26m',
+    text: 'HeyGoogle',
+    comments: '10K',
+    retweets: '500K',
+    likes: '22M',
+  ),
+];
