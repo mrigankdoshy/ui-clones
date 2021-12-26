@@ -1,4 +1,4 @@
-# App UIs
+# UIs
 
 This repo is all about cloning UIs of different apps using Flutter
 
