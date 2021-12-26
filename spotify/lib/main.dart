@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'home/home.dart';
+import 'package:spotify/screens/home/home.dart';
 
 void main() {
   runApp(const Spotify());
