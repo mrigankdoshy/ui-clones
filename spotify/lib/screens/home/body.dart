@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify/screens/home/sections/albums_overview.dart';
+import 'package:spotify/screens/home/sections/jump_back_in.dart';
 import 'package:spotify/screens/home/sections/recently_played.dart';
 import 'package:spotify/screens/home/sections/recommeded.dart';
 
@@ -15,6 +16,7 @@ class Body extends StatelessWidget {
           AlbumsOverview(),
           RecentlyPlayed(),
           Recommended(),
+          JumpBackIn(),
         ],
       ),
     );
