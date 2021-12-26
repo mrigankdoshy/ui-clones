@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/widgets/actions.dart';
 import 'package:spotify/widgets/album_tile.dart';
 
 class AlbumsOverview extends StatelessWidget {
@@ -9,18 +10,23 @@ class AlbumsOverview extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
-          padding: EdgeInsets.only(left: 16.0),
-          child: Text(
-            "Good afternoon",
-            style: TextStyle(
-              fontWeight: FontWeight.w900,
-              fontSize: 22,
-              color: Colors.white,
-            ),
-          ),
-        ),
-        const SizedBox(height: 24),
+        Padding(
+            padding: const EdgeInsets.only(left: 16.0, top: 70),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                Text(
+                  "Good afternoon",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w900,
+                    fontSize: 22,
+                    color: Colors.white,
+                  ),
+                ),
+                ActionsHeader()
+              ],
+            )),
+        const SizedBox(height: 8),
         Column(
           children: [
             Padding(

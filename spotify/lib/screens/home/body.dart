@@ -9,15 +9,28 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          AlbumsOverview(),
-          RecentlyPlayed(),
-          Recommended(),
-          JumpBackIn(),
-        ],
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Color(0xFF31256B), Color(0xFF191414)],
+          stops: [
+            0.05,
+            0.4,
+          ],
+        ),
+      ),
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            AlbumsOverview(),
+            RecentlyPlayed(),
+            Recommended(),
+            JumpBackIn(),
+          ],
+        ),
       ),
     );
   }

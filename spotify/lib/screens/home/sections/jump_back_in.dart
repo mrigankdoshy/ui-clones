@@ -20,7 +20,7 @@ class JumpBackIn extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: 24),
+        const SizedBox(height: 20),
         SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Padding(

@@ -10,9 +10,18 @@ class ActionsHeader extends StatelessWidget {
       child: Wrap(
         spacing: 20,
         children: const [
-          Icon(Icons.notifications_outlined),
-          Icon(Icons.history_outlined),
-          Icon(Icons.settings_outlined),
+          Icon(
+            Icons.notifications_outlined,
+            color: Colors.white,
+          ),
+          Icon(
+            Icons.history_outlined,
+            color: Colors.white,
+          ),
+          Icon(
+            Icons.settings_outlined,
+            color: Colors.white,
+          ),
         ],
       ),
     );
