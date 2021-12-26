@@ -1,3 +1,4 @@
 # Twitter UI
 
-https://user-images.githubusercontent.com/32623983/147397499-c85db7de-83ec-426a-9c10-12371f7eb1f7.mp4
+
+https://user-images.githubusercontent.com/32623983/147397558-c7c9621f-2d83-43f1-a16f-c956a341c82c.mp4
