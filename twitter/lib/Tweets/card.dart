@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:twitter/Profile/profile.dart';
+import 'package:twitter/profile/profile_picture.dart';
 
 import 'tweet.dart';
 

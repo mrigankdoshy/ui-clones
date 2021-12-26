@@ -1,4 +1,4 @@
-import 'package:twitter/Tweets/card.dart';
+import 'package:twitter/tweets/card.dart';
 
 const tweets = [
   Card(
