@@ -22,8 +22,7 @@ class BottomNavigation extends StatelessWidget {
         ),
         BottomNavigationBarItem(
           icon: ImageIcon(
-            AssetImage(
-                '/Users/mrigankdoshy/Documents/Code/Flutter/UIs/spotify/assets/library.png'),
+            AssetImage('assets/library.png'),
           ),
           label: "Your Library",
         ),

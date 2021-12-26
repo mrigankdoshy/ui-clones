@@ -17,7 +17,9 @@ class Spotify extends StatelessWidget {
         primarySwatch: Colors.blue,
         canvasColor: const Color(0xFF191919),
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        fontFamily: GoogleFonts.montserrat().fontFamily,
+        textTheme: GoogleFonts.montserratTextTheme(
+          Theme.of(context).textTheme,
+        ),
       ),
       home: const Home(),
     );

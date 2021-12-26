@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/screens/home/body.dart';
 import 'package:spotify/widgets/actions.dart';
 import 'package:spotify/widgets/bottom_navigation.dart';
 
@@ -15,6 +16,7 @@ class Home extends StatelessWidget {
         actions: const [ActionsHeader()],
       ),
       bottomNavigationBar: const BottomNavigation(),
+      body: const Body(),
     );
   }
 }
