@@ -1,7 +1,7 @@
 import 'package:twitter/Tweets/card.dart';
 
-var tweets = [
-  const Card(
+const tweets = [
+  Card(
     avatar: 'assets/person1.jpg',
     name: 'Antonio Blaise',
     username: 'ablaise',
@@ -11,7 +11,7 @@ var tweets = [
     retweets: '23',
     likes: '221',
   ),
-  const Card(
+  Card(
     avatar: 'assets/person2.jpg',
     name: 'Jake Gonzalez',
     username: 'jake_gonzalez',
@@ -22,7 +22,7 @@ var tweets = [
     retweets: '2K',
     likes: '12K',
   ),
-  const Card(
+  Card(
     avatar: 'assets/person3.jpg',
     name: 'Michaela Clover',
     username: 'michaela21',
@@ -33,7 +33,7 @@ var tweets = [
     retweets: '9K',
     likes: '52K',
   ),
-  const Card(
+  Card(
     avatar: 'assets/person4.jpg',
     name: 'Emma Novak',
     username: 'emmanovak',
@@ -43,7 +43,7 @@ var tweets = [
     retweets: '470K',
     likes: '22M',
   ),
-  const Card(
+  Card(
     avatar: 'assets/person5.jpg',
     name: 'Jo Bowers',
     username: 'yoyoitsjo',
@@ -54,7 +54,7 @@ var tweets = [
     retweets: '4',
     likes: '26',
   ),
-  const Card(
+  Card(
     avatar: 'assets/person6.jpg',
     name: 'Katie Walton',
     username: 'katiewalton',
@@ -65,7 +65,7 @@ var tweets = [
     retweets: '70K',
     likes: '2M',
   ),
-  const Card(
+  Card(
     avatar: 'assets/person7.jpg',
     name: 'Ana Tate',
     username: 'its_ana',
