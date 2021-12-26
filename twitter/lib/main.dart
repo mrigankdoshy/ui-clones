@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'Home/HomePage.dart';
+import 'home/home.dart';
 
 void main() {
   runApp(const TwitterUI());
@@ -13,7 +13,7 @@ class TwitterUI extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: Home(),
     );
   }
 }
