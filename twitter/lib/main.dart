@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'home/home.dart';
+import 'package:twitter/screens/home/home.dart';
 
 void main() {
   runApp(const TwitterUI());
