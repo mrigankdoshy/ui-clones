@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:twitter/tweets/tweets.dart';
+
 import 'dart:math' as math;
+
+import 'package:twitter/data/tweets/tweets.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
