@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:netflix/screens/home/sections/continue_watching.dart';
 import 'package:netflix/screens/home/sections/featured.dart';
+import 'package:netflix/screens/home/sections/my_list.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -11,6 +13,8 @@ class Body extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           Featured(),
+          ContinueWatching(),
+          MyList(),
         ],
       ),
     );
