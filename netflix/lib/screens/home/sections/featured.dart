@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netflix/widgets/action_bar.dart';
+import 'package:netflix/widgets/options_bar.dart';
 import 'package:netflix/widgets/top_bar.dart';
 
 class Featured extends StatelessWidget {
@@ -27,14 +28,19 @@ class Featured extends StatelessWidget {
               Colors.transparent,
               Colors.black,
             ],
-            stops: [0.0, 0.3, 0.8, 1.0],
+            stops: [0.01, 0.3, 0.8, 1.0],
           ),
         ),
         child: SafeArea(
           child: Stack(
-            children: const [
-              TopBar(),
-              Align(
+            children: [
+              Column(
+                children: const [
+                  TopBar(),
+                  OptionsBar(),
+                ],
+              ),
+              const Align(
                 alignment: Alignment.bottomCenter,
                 child: ActionBar(),
               ),
