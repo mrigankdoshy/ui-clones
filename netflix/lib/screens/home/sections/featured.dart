@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix/widgets/action_bar.dart';
 import 'package:netflix/widgets/top_bar.dart';
 
 class Featured extends StatelessWidget {
@@ -33,10 +34,10 @@ class Featured extends StatelessWidget {
           child: Stack(
             children: const [
               TopBar(),
-              // Align(
-              //   alignment: Alignment.bottomCenter,
-              //   child: BottomBar(),
-              // ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: ActionBar(),
+              ),
             ],
           ),
         ),
