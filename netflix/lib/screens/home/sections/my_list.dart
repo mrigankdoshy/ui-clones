@@ -12,8 +12,8 @@ class MyList extends StatelessWidget {
         const Padding(
           padding: EdgeInsets.only(
             top: 16.0,
-            left: 16.0,
-            right: 16.0,
+            left: 8.0,
+            right: 8.0,
             bottom: 8.0,
           ),
           child: Text(
@@ -28,7 +28,7 @@ class MyList extends StatelessWidget {
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Padding(
-            padding: const EdgeInsets.only(left: 16, right: 16),
+            padding: const EdgeInsets.only(left: 8, right: 8),
             child: Wrap(
               spacing: 8.0,
               children: const [
