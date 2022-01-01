@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:netflix/widgets/currently_watching.dart';
-import 'package:netflix/widgets/movie_show.dart';
 
 class ContinueWatching extends StatelessWidget {
   const ContinueWatching({Key? key}) : super(key: key);

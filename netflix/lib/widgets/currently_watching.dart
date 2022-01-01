@@ -34,7 +34,7 @@ class CurrentlyWatching extends StatelessWidget {
                   Container(
                     height: 3,
                     width: length,
-                    color: Colors.red,
+                    color: const Color(0xFFE50914),
                   ),
                 ],
               ),

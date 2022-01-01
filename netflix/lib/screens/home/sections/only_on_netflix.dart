@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:netflix/widgets/movie_show.dart';
 import 'package:netflix/widgets/netflix_exclusive.dart';
 
 class OnlyOnNetflix extends StatelessWidget {
