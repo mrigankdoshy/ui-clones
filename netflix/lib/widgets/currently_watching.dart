@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix/widgets/movie_show.dart';
 
 class CurrentlyWatching extends StatelessWidget {
   final String image;
@@ -11,14 +12,7 @@ class CurrentlyWatching extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
-          height: 150.0,
-          width: 110.0,
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(4.0),
-            child: Image.asset(image, fit: BoxFit.cover),
-          ),
-        ),
+        MovieShow(image: image),
         Align(
           alignment: Alignment.bottomLeft,
           child: Column(
