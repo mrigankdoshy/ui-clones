@@ -33,7 +33,6 @@ class ContinueWatching extends StatelessWidget {
               spacing: 8.0,
               children: const [
                 MovieShow(image: 'assets/seinfeld.png'),
-                MovieShow(image: 'assets/narcos_mexico.jpg'),
                 MovieShow(image: 'assets/muder_mystery.jpg'),
                 MovieShow(image: 'assets/schitts_creek.jpg'),
               ],

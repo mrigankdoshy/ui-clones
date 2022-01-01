@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:netflix/widgets/movie_show.dart';
 
-class MyList extends StatelessWidget {
-  const MyList({Key? key}) : super(key: key);
+class TvShows extends StatelessWidget {
+  const TvShows({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class MyList extends StatelessWidget {
             bottom: 8.0,
           ),
           child: Text(
-            'My List',
+            'TV Shows',
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -32,11 +32,11 @@ class MyList extends StatelessWidget {
             child: Wrap(
               spacing: 8.0,
               children: const [
-                MovieShow(image: 'assets/witcher.jpg'),
-                MovieShow(image: 'assets/better_call_saul.jpg'),
-                MovieShow(image: 'assets/peaky_blinders.jpg'),
-                MovieShow(image: 'assets/el_camino.png'),
-                MovieShow(image: 'assets/war_machine.jpg'),
+                MovieShow(image: 'assets/better_call_saul_2.jpg'),
+                MovieShow(image: 'assets/how_to_get_away_with_murder.jpg'),
+                MovieShow(image: 'assets/lucifer.jpg'),
+                MovieShow(image: 'assets/lupin.jpg'),
+                MovieShow(image: 'assets/narcos.jpg'),
               ],
             ),
           ),
