@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/screens/home/body.dart';
 import 'package:instagram/widgets/bottom_navigation.dart';
 
 class Home extends StatelessWidget {
@@ -40,7 +41,7 @@ class Home extends StatelessWidget {
           ),
         ],
       ),
+      body: const Body(),
     );
-    // body: Bod
   }
 }
