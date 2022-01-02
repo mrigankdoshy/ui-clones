@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/widgets/profile/profile_picture.dart';
 
 class BottomNavigation extends StatelessWidget {
   const BottomNavigation({Key? key}) : super(key: key);
@@ -23,7 +24,10 @@ class BottomNavigation extends StatelessWidget {
           label: "Search",
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.live_tv_outlined),
+          icon: ImageIcon(
+            AssetImage("assets/instagram-reels.png"),
+            size: 22,
+          ),
           label: "Reels",
         ),
         BottomNavigationBarItem(
@@ -31,7 +35,7 @@ class BottomNavigation extends StatelessWidget {
           label: "Shopping",
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.circle),
+          icon: ProfilePicture(path: 'assets/profile.jpg'),
           label: "Account",
         ),
       ],
