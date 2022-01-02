@@ -6,9 +6,41 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      bottomNavigationBar: BottomNavigation(),
-      // body: Body(),
+    return Scaffold(
+      bottomNavigationBar: const BottomNavigation(),
+      appBar: AppBar(
+        centerTitle: false,
+        backgroundColor: Colors.black,
+        title: Image.asset(
+          'assets/instagram.png',
+          color: Colors.white,
+          width: 130,
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 16),
+            child: Row(
+              children: const [
+                ImageIcon(
+                  AssetImage("assets/create.png"),
+                  size: 28,
+                ),
+                SizedBox(width: 20.0),
+                ImageIcon(
+                  AssetImage("assets/heart.png"),
+                  size: 28,
+                ),
+                SizedBox(width: 16.0),
+                ImageIcon(
+                  AssetImage("assets/dm.png"),
+                  size: 28,
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
+    // body: Bod
   }
 }
