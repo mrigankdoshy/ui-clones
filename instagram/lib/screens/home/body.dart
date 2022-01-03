@@ -10,9 +10,13 @@ class Body extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          Stories(),
-          Posts(),
+        children: [
+          const Stories(),
+          Container(
+            height: 0.5,
+            color: Colors.white.withOpacity(0.2),
+          ),
+          const Posts(),
         ],
       ),
     );

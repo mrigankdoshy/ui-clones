@@ -32,12 +32,12 @@ class Post extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 8.0, bottom: 8.0),
+              padding: const EdgeInsets.only(top: 8.0, left: 12.0, bottom: 8.0),
               child: Row(
                 children: [
                   Container(
                     width: 35.0,
-                    height: 36.0,
+                    height: 35.0,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(100),
                       gradient: const LinearGradient(
@@ -81,7 +81,8 @@ class Post extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(
+                  top: 8.0, left: 12.0, right: 12.0, bottom: 8.0),
               child: Row(
                 children: [
                   const ImageIcon(
@@ -109,18 +110,16 @@ class Post extends StatelessWidget {
                 ],
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Icon(
-                Icons.bookmark_border,
-                color: Colors.white,
-                size: 25.0,
-              ),
+            const Icon(
+              Icons.bookmark_border,
+              color: Colors.white,
+              size: 28.0,
             ),
           ],
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+          padding: const EdgeInsets.only(
+              top: 4.0, left: 12.0, right: 12.0, bottom: 0.0),
           child: RichText(
             text: TextSpan(
               style: const TextStyle(
@@ -142,7 +141,8 @@ class Post extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+          padding: const EdgeInsets.only(
+              top: 8.0, left: 12.0, right: 12.0, bottom: 8.0),
           child: Text(
             caption,
             style: const TextStyle(
@@ -151,7 +151,7 @@ class Post extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+          padding: const EdgeInsets.only(left: 12.0, right: 12.0, bottom: 8.0),
           child: Text(
             "View all $commentCount comments",
             style: TextStyle(
@@ -160,12 +160,12 @@ class Post extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+          padding: const EdgeInsets.only(left: 12.0, right: 12.0),
           child: Text(
             "$time ago",
             style: TextStyle(
               color: Colors.white.withOpacity(0.75),
-              fontSize: 10.0,
+              fontSize: 11.0,
             ),
           ),
         )
