@@ -16,7 +16,7 @@ class Instagram extends StatelessWidget {
       theme: ThemeData(
         canvasColor: Colors.black,
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        textTheme: GoogleFonts.montserratTextTheme(
+        textTheme: GoogleFonts.interTextTheme(
           Theme.of(context).textTheme,
         ),
       ),

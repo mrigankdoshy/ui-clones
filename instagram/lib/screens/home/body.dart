@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/screens/home/sections/posts.dart';
 import 'package:instagram/screens/home/sections/stories.dart';
 
 class Body extends StatelessWidget {
@@ -11,6 +12,7 @@ class Body extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           Stories(),
+          Posts(),
         ],
       ),
     );

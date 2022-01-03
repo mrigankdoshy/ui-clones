@@ -21,20 +21,24 @@ class Home extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 16),
             child: Row(
-              children: const [
-                ImageIcon(
+              children: [
+                const ImageIcon(
                   AssetImage("assets/create.png"),
                   size: 28,
                 ),
-                SizedBox(width: 20.0),
-                ImageIcon(
+                const SizedBox(width: 20.0),
+                const ImageIcon(
                   AssetImage("assets/heart.png"),
                   size: 28,
                 ),
-                SizedBox(width: 16.0),
-                ImageIcon(
-                  AssetImage("assets/dm.png"),
-                  size: 28,
+                const SizedBox(width: 16.0),
+                Transform(
+                  alignment: FractionalOffset.center,
+                  transform: Matrix4.identity()..rotateZ(20 * 3.1415927 / 180),
+                  child: const ImageIcon(
+                    AssetImage("assets/dm.png"),
+                    size: 28,
+                  ),
                 ),
               ],
             ),

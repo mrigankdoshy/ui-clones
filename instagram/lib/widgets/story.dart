@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/utils/colors.dart';
+import 'package:instagram/widgets/picture.dart';
 
 class Story extends StatelessWidget {
   final String image;
@@ -23,7 +24,7 @@ class Story extends StatelessWidget {
                   color: Colors.grey[700],
                 ),
                 padding: const EdgeInsets.all(1.5),
-                child: picture(),
+                child: picture(image),
               )
             : Container(
                 width: 70.0,
@@ -37,7 +38,7 @@ class Story extends StatelessWidget {
                   ),
                 ),
                 padding: const EdgeInsets.all(2.5),
-                child: picture(),
+                child: picture(image),
               ),
         const SizedBox(height: 6.0),
         Text(
@@ -48,20 +49,6 @@ class Story extends StatelessWidget {
           ),
         )
       ],
-    );
-  }
-
-  Widget picture() {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(100),
-        color: Colors.black,
-      ),
-      padding: const EdgeInsets.all(3.5),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(100.0),
-        child: Image.asset(image),
-      ),
     );
   }
 }
