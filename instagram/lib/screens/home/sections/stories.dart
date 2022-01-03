@@ -13,35 +13,47 @@ class Stories extends StatelessWidget {
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Wrap(
-            spacing: 16.0,
+            spacing: 12.0,
             children: const [
               Story(
-                image: "assets/users/person1.jpg",
-                name: "person1",
+                image: "assets/profile.jpg",
+                name: "Your Story",
+                viewed: true,
               ),
               Story(
-                image: "assets/users/person2.jpg",
-                name: "person2",
+                image: "assets/person1.jpg",
+                name: "ablaise",
+                viewed: false,
               ),
               Story(
-                image: "assets/users/person3.jpg",
-                name: "person3",
+                image: "assets/person2.jpg",
+                name: "jake_gonzalez",
+                viewed: false,
               ),
               Story(
-                image: "assets/users/person4.jpg",
-                name: "person4",
+                image: "assets/person3.jpg",
+                name: "michaela21",
+                viewed: false,
               ),
               Story(
-                image: "assets/users/person5.jpg",
-                name: "person5",
+                image: "assets/person4.jpg",
+                name: "emmanovak",
+                viewed: false,
               ),
               Story(
-                image: "assets/users/person6.jpg",
-                name: "person6",
+                image: "assets/person5.jpg",
+                name: "yoyoitsjo",
+                viewed: false,
               ),
               Story(
-                image: "assets/users/person7.jpg",
-                name: "person7",
+                image: "assets/person6.jpg",
+                name: "katiewalton",
+                viewed: false,
+              ),
+              Story(
+                image: "assets/person7.jpg",
+                name: "its_ana",
+                viewed: false,
               ),
             ],
           ),
