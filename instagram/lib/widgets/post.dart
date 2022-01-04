@@ -7,9 +7,10 @@ class Post extends StatelessWidget {
   final String username;
   final String content;
   final String caption;
-  final String likedBy;
+  final String likedByName;
   final String commentCount;
   final String time;
+  final List<String> likedByPicture;
 
   const Post({
     Key? key,
@@ -17,9 +18,10 @@ class Post extends StatelessWidget {
     required this.profilePicture,
     required this.content,
     required this.caption,
-    required this.likedBy,
+    required this.likedByName,
     required this.commentCount,
     required this.time,
+    required this.likedByPicture,
   }) : super(key: key);
 
   @override
@@ -31,7 +33,7 @@ class Post extends StatelessWidget {
         postHeader(),
         postContent(context),
         postActions(),
-        postLikes(),
+        postLikes(context),
         postCaption(),
         postComments(),
         postTime(),
@@ -134,28 +136,52 @@ class Post extends StatelessWidget {
     );
   }
 
-  Widget postLikes() {
+  Widget postLikes(BuildContext context) {
     return Padding(
       padding:
-          const EdgeInsets.only(top: 4.0, left: 12.0, right: 12.0, bottom: 0.0),
-      child: RichText(
-        text: TextSpan(
-          style: const TextStyle(
-            color: Colors.white,
+          const EdgeInsets.only(top: 4.0, left: 16.0, right: 12.0, bottom: 0.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          SizedBox(
+            height: 22,
+            width: 50,
+            child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: likedByPicture.length,
+                itemBuilder: (context, index) {
+                  return Align(
+                    widthFactor: 0.35,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.black,
+                      child: CircleAvatar(
+                        radius: 8,
+                        backgroundImage: AssetImage(likedByPicture[index]),
+                      ),
+                    ),
+                  );
+                }),
           ),
-          children: [
-            const TextSpan(text: 'Liked by '),
-            TextSpan(
-              text: likedBy,
-              style: const TextStyle(fontWeight: FontWeight.bold),
+          RichText(
+            text: TextSpan(
+              style: const TextStyle(
+                color: Colors.white,
+              ),
+              children: [
+                const TextSpan(text: 'Liked by '),
+                TextSpan(
+                  text: likedByName,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
+                const TextSpan(text: ' and '),
+                const TextSpan(
+                  text: 'others',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ],
             ),
-            const TextSpan(text: ' and '),
-            const TextSpan(
-              text: 'others',
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
