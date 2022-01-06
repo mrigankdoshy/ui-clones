@@ -1,12 +1,14 @@
+import 'package:emojis/emojis.dart';
 import 'package:flutter/material.dart';
 import 'package:instagram/utils/colors.dart';
 import 'package:instagram/widgets/picture.dart';
+import 'package:instagram/widgets/profile_picture.dart';
 
 class Post extends StatelessWidget {
   final String profilePicture;
   final String username;
   final String content;
-  final String caption;
+  final String captionText;
   final String likedByName;
   final String commentCount;
   final String time;
@@ -17,7 +19,7 @@ class Post extends StatelessWidget {
     required this.username,
     required this.profilePicture,
     required this.content,
-    required this.caption,
+    required this.captionText,
     required this.likedByName,
     required this.commentCount,
     required this.time,
@@ -30,18 +32,19 @@ class Post extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        postHeader(),
-        postContent(context),
-        postActions(),
-        postLikes(context),
-        postCaption(),
-        postComments(),
-        postTime(),
+        header(),
+        media(context),
+        actions(),
+        likes(context),
+        caption(),
+        viewComments(),
+        commentSection(),
+        timePosted(),
       ],
     );
   }
 
-  Widget postHeader() {
+  Widget header() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -85,7 +88,7 @@ class Post extends StatelessWidget {
     );
   }
 
-  Widget postContent(BuildContext context) {
+  Widget media(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: Image.asset(
@@ -95,7 +98,7 @@ class Post extends StatelessWidget {
     );
   }
 
-  Widget postActions() {
+  Widget actions() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -136,7 +139,7 @@ class Post extends StatelessWidget {
     );
   }
 
-  Widget postLikes(BuildContext context) {
+  Widget likes(BuildContext context) {
     return Padding(
       padding:
           const EdgeInsets.only(top: 4.0, left: 16.0, right: 12.0, bottom: 0.0),
@@ -147,20 +150,21 @@ class Post extends StatelessWidget {
             height: 22,
             width: 50,
             child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: likedByPicture.length,
-                itemBuilder: (context, index) {
-                  return Align(
-                    widthFactor: 0.35,
+              scrollDirection: Axis.horizontal,
+              itemCount: likedByPicture.length,
+              itemBuilder: (context, index) {
+                return Align(
+                  widthFactor: 0.35,
+                  child: CircleAvatar(
+                    backgroundColor: Colors.black,
                     child: CircleAvatar(
-                      backgroundColor: Colors.black,
-                      child: CircleAvatar(
-                        radius: 8,
-                        backgroundImage: AssetImage(likedByPicture[index]),
-                      ),
+                      radius: 8,
+                      backgroundImage: AssetImage(likedByPicture[index]),
                     ),
-                  );
-                }),
+                  ),
+                );
+              },
+            ),
           ),
           RichText(
             text: TextSpan(
@@ -186,12 +190,12 @@ class Post extends StatelessWidget {
     );
   }
 
-  Widget postCaption() {
+  Widget caption() {
     return Padding(
       padding:
           const EdgeInsets.only(top: 8.0, left: 12.0, right: 12.0, bottom: 8.0),
       child: Text(
-        caption,
+        captionText,
         style: const TextStyle(
           color: Colors.white,
         ),
@@ -199,9 +203,9 @@ class Post extends StatelessWidget {
     );
   }
 
-  Widget postComments() {
+  Widget viewComments() {
     return Padding(
-      padding: const EdgeInsets.only(left: 12.0, right: 12.0, bottom: 8.0),
+      padding: const EdgeInsets.only(left: 12.0, right: 12.0, bottom: 12.0),
       child: Text(
         "View all $commentCount comments",
         style: TextStyle(
@@ -211,7 +215,7 @@ class Post extends StatelessWidget {
     );
   }
 
-  Widget postTime() {
+  Widget timePosted() {
     return Padding(
       padding: const EdgeInsets.only(left: 12.0, right: 12.0),
       child: Text(
@@ -222,5 +226,74 @@ class Post extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  FutureBuilder<Widget> commentSection() {
+    return FutureBuilder<Widget>(
+        future: makeComment(),
+        builder: (BuildContext context, AsyncSnapshot<Widget> widget) {
+          return SizedBox(child: widget.data);
+        });
+  }
+
+  Future<Widget> makeComment() {
+    return Future.delayed(const Duration(milliseconds: 3000), () {
+      return Padding(
+        padding: const EdgeInsets.only(left: 12.0, right: 12.0, bottom: 8.0),
+        child: SizedBox(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  const ProfilePicture(path: 'assets/profile.jpg'),
+                  const SizedBox(width: 8.0),
+                  Text(
+                    "Add a comment...",
+                    style: TextStyle(
+                      color: Colors.white.withOpacity(0.75),
+                    ),
+                  ),
+                ],
+              ),
+              Wrap(
+                spacing: 12.0,
+                children: [
+                  Container(
+                    transform: Matrix4.translationValues(0.0, -1.0, 0.0),
+                    child: const Text(
+                      Emojis.redHeart,
+                      style: TextStyle(
+                        color: Colors.red,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    transform: Matrix4.translationValues(0.0, -7.5, 0.0),
+                    child: const Text(
+                      Emojis.raisingHands,
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    transform: Matrix4.translationValues(0.0, 1.0, 0.0),
+                    child: Icon(
+                      Icons.add_circle_outline,
+                      color: Colors.white.withOpacity(0.35),
+                      size: 16,
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
+      );
+    });
   }
 }
