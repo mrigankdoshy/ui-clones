@@ -13,7 +13,7 @@ class Snapchat extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        canvasColor: Colors.black,
+        canvasColor: const Color(0xFF0D0D0D),
         visualDensity: VisualDensity.adaptivePlatformDensity,
         fontFamily: 'Metropolis',
       ),
