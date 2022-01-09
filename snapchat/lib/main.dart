@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:snapchat/screens/chats/chats.dart';
+import 'package:snapchat/screens/home.dart';
 
 void main() {
   runApp(const Snapchat());
@@ -17,7 +17,7 @@ class Snapchat extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         fontFamily: 'Metropolis',
       ),
-      home: const Chats(),
+      home: const Home(),
     );
   }
 }
