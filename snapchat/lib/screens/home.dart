@@ -17,6 +17,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int page = 1;
+  late String title;
   late PageController control;
 
   @override
@@ -25,6 +26,7 @@ class _HomeState extends State<Home> {
       keepPage: true,
       initialPage: page,
     );
+    title = "Chat";
     super.initState();
   }
 
@@ -44,10 +46,10 @@ class _HomeState extends State<Home> {
             ],
           ),
         ),
-        title: const Text(
-          "Chat",
-          style:
-              TextStyle(fontFamily: "Metropolis", fontWeight: FontWeight.w700),
+        title: Text(
+          title,
+          style: const TextStyle(
+              fontFamily: "Metropolis", fontWeight: FontWeight.w700),
         ),
         actions: [
           Padding(
@@ -71,6 +73,7 @@ class _HomeState extends State<Home> {
         onPageChanged: (newPage) {
           setState(() {
             page = newPage;
+            title = getTitle(page);
           });
         },
         children: const [
@@ -82,5 +85,22 @@ class _HomeState extends State<Home> {
         ],
       ),
     );
+  }
+
+  String getTitle(page) {
+    switch (page) {
+      case 0:
+        return 'Map';
+      case 1:
+        return 'Chat';
+      case 2:
+        return 'Camera';
+      case 3:
+        return 'Stories';
+      case 4:
+        return 'Spotlight';
+      default:
+        return 'Chat';
+    }
   }
 }
