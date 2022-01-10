@@ -43,21 +43,25 @@ class _HomeState extends State<Home> {
         page: page,
         controller: control,
       ),
-      body: PageView(
-        controller: control,
-        onPageChanged: (newPage) {
-          setState(() {
-            page = newPage;
-            title = getTitle(page);
-          });
-        },
-        children: const [
-          Map(),
-          Chat(),
-          Camera(),
-          Stories(),
-          Spotlight(),
-        ],
+      body: ClipRRect(
+        borderRadius: const BorderRadius.only(
+            bottomLeft: Radius.circular(16), bottomRight: Radius.circular(16)),
+        child: PageView(
+          controller: control,
+          onPageChanged: (newPage) {
+            setState(() {
+              page = newPage;
+              title = getTitle(page);
+            });
+          },
+          children: const [
+            Map(),
+            Chat(),
+            Camera(),
+            Stories(),
+            Spotlight(),
+          ],
+        ),
       ),
     );
   }

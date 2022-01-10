@@ -14,7 +14,8 @@ class TopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.transparent,
+      backgroundColor: const Color(0xFF0D0D0D),
+      elevation: 0,
       leadingWidth: 100,
       leading: Padding(
         padding: const EdgeInsets.only(left: 8.0),
