@@ -29,8 +29,11 @@ class TopBar extends StatelessWidget {
       ),
       title: Text(
         title,
-        style: const TextStyle(
-            fontFamily: "Metropolis", fontWeight: FontWeight.w700),
+        style: TextStyle(
+          fontFamily: "Metropolis",
+          fontWeight: FontWeight.w700,
+          color: Colors.white.withOpacity(0.9),
+        ),
       ),
       actions: [
         Padding(

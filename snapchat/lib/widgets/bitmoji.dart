@@ -6,12 +6,10 @@ class Bitmoji extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CircleAvatar(
-      radius: 20,
-      backgroundColor: const Color(0xFF171717),
-      child: ClipOval(
-        child: Image.asset(image),
-      ),
+    return Image.asset(
+      image,
+      height: 60,
+      width: 60,
     );
   }
 }
