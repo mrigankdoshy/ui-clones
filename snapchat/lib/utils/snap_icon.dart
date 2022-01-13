@@ -12,6 +12,6 @@ const viewedWithAudio = "assets/chat/viewed_with_audio.png";
 const viewedChat = "assets/chat/viewed_chat.png";
 const screenshotWithoutAudio = "assets/chat/screenshot_without_audio.png";
 const screenshotWithAudio = "assets/chat/screenshot_with_audio.png";
-const screenChat = "assets/chat/screenshot_chat.png";
+const screenshotChat = "assets/chat/screenshot_chat.png";
 const replayedWithoutAudio = "assets/chat/replayed_without_audio.png";
 const replayedWithAudio = "assets/chat/replayed_with_audio.png";
