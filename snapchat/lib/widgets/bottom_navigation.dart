@@ -53,17 +53,17 @@ class BottomNavigation extends StatelessWidget {
   Color _getColor() {
     switch (page) {
       case 0:
-        return Colors.green;
+        return const Color(0xFF4ABA16);
       case 1:
-        return Colors.blue;
+        return const Color(0xFF3CB2E2);
       case 2:
-        return Colors.yellow;
+        return const Color(0xFFFFFC00);
       case 3:
-        return Colors.purple;
+        return const Color(0xFF9B55A0);
       case 4:
-        return Colors.red;
+        return const Color(0xFFE92754);
       default:
-        return Colors.blue;
+        return const Color(0xFF3CB2E2);
     }
   }
 }

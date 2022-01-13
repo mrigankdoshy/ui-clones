@@ -43,6 +43,13 @@ class _HomeState extends State<Home> {
         page: page,
         controller: control,
       ),
+      floatingActionButton: page == 1
+          ? FloatingActionButton(
+              onPressed: () {},
+              backgroundColor: const Color(0xFF3CB2E2),
+              child: const Icon(Icons.edit),
+            )
+          : null,
       body: ClipRRect(
         borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(16), bottomRight: Radius.circular(16)),
